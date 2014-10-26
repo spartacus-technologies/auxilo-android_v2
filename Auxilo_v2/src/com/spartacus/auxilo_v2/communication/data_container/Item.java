@@ -3,15 +3,16 @@ package com.spartacus.auxilo_v2.communication.data_container;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 public class Item {
 	
 	public class DataPoint{
 			
 		public Date timestamp;
-		public float data;
+		public List<Map<String, String>> data;
 		
-		DataPoint(Date ts, float data_){
+		DataPoint(Date ts,  List<Map<String, String>> data_){
 			
 			timestamp = ts;
 			data = data_;
@@ -82,6 +83,14 @@ public class Item {
 
 	public void setData(List<DataPoint> data) {
 		this.data = data;
+	}
+
+	public String getUniqueID() throws Exception {
+		
+		if(DeviceID == null || itemID == null) throw new Exception("DeviceID or itemID == null");
+		
+		return DeviceID + "_" + itemID;
+		
 	}
 
 }

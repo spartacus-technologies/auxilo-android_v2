@@ -1,0 +1,23 @@
+ {"message": {
+
+       "custID": "eetu",
+       "target": "Nexus_5",
+       "items": [
+           {
+               "DevID": "RPi_1",
+               "name": "temp_sensor1",
+               "startTime": "1.8.2014 00:00:00",
+               "endTime": "<currentTime>",
+               "data": null
+           },
+           {
+               "DevID": "Samsung_GT",
+               "name": "gps_1",
+               "startTime": "<currentTime>",
+               "endTime": "<currentTime>",
+               "data": null
+           }
+       ]
+   }
+
+} 

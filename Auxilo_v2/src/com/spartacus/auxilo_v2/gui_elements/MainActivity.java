@@ -1,8 +1,13 @@
 package com.spartacus.auxilo_v2.gui_elements;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Locale;
 
 import com.spartacus.auxilo_v2.R;
+import com.spartacus.auxilo_v2.communication.data_container.JSONWrapper;
 
 import android.app.ActionBar.Tab;
 import android.app.ActionBar.TabListener;
@@ -11,6 +16,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.res.AssetManager;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -38,6 +44,8 @@ public class MainActivity extends Activity implements TabListener {
 	 */
 	ViewPager mViewPager;
 
+	//Auxilo static variables:
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -72,6 +80,14 @@ public class MainActivity extends Activity implements TabListener {
 					.setTabListener(this));
 		}
 		
+		initItems();
+		
+		
+	}
+	
+	void initItems(){
+		
+		JSONWrapper.parseItemsfromJSON(getTestJSON());
 	}
 
 	@Override
@@ -168,4 +184,35 @@ public class MainActivity extends Activity implements TabListener {
 		
 	}
 
+	String getTestJSON(){
+		
+		//Set changelog text:
+		AssetManager am = this.getAssets();
+		
+		InputStream is = null;
+		
+		try {
+			is = am.open("testJSON.txt");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		BufferedReader r = new BufferedReader(new InputStreamReader(is));
+		StringBuilder total = new StringBuilder();
+		String line;
+		try {
+			while ((line = r.readLine()) != null) {
+			    total.append(line);
+			    total.append("\n");
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		line = total.toString();
+		return line;
+		
+	}
+	
 }

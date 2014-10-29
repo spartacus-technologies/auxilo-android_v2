@@ -5,6 +5,13 @@
        "items": [
            {
                "DevID": "RPi_1",
+               "name": "temp_sensor2",
+               "startTime": "1.8.2014 00:00:00",
+               "endTime": "<currentTime>",
+               "data": null
+           },
+           {
+               "DevID": "RPi_1",
                "name": "temp_sensor1",
                "startTime": "1.8.2014 00:00:00",
                "endTime": "<currentTime>",
@@ -13,6 +20,13 @@
            {
                "DevID": "Samsung_GT",
                "name": "gps_1",
+               "startTime": "<currentTime>",
+               "endTime": "<currentTime>",
+               "data": null
+           },
+           {
+               "DevID": "Samsung_GT",
+               "name": "battery_voltage",
                "startTime": "<currentTime>",
                "endTime": "<currentTime>",
                "data": null

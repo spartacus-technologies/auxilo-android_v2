@@ -57,7 +57,7 @@ public class JSONWrapper{
 			temp_item.setDeviceID(deviceID);
 			temp_item.setItemID(item_name);
 			
-			StaticItemContainer.addItem(temp_item);
+			StaticDataContainer.addItem(temp_item);
 		}
 		
 		/*

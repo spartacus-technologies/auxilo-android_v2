@@ -8,18 +8,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.spartacus.auxilo_v2.gui_elements.MainActivity$PlaceholderFragment" >
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:id="@+id/textView1"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="Fragment Devices"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:orientation="vertical" >
+
+        <ExpandableListView
+            android:id="@+id/listViewItems"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ExpandableListView>
+
+    </LinearLayout>
 
 </RelativeLayout>

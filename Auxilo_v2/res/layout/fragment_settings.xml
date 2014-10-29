@@ -30,7 +30,7 @@
                     android:orientation="vertical" >
 
                     <TextView
-                        android:id="@+id/textView1"
+                        android:id="@+id/textView_spacer2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Server address"
@@ -97,7 +97,7 @@
            android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/button1"
+                android:id="@+id/buttonOpenGraph"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Save" />
